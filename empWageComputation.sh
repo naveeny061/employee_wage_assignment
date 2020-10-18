@@ -15,10 +15,11 @@ then
 read -p "enter 1 for full day and 2 for part time" choise
 case $choise in
 1)dailyEmployeeWage=$((wagePerHour*fullDayHour))
-echo "daily employee wage =" $dailyEmployeeWage;;
+monthSalary=$((dailyEmployeeWage*20));;
 2)dailyEmployeeWagePartTime=$((wagePerHour*partTimeHours))
-echo "part time daily employee wage =" $dailyEmployeeWagePartTime;;
+monthSalary=$((dailyEmployeeWagePartTime*20));;
 esac
-else 
-echo "no wage "
+else
+monthSalary=0
 fi
+echo "monthSalary=" $monthSalary
