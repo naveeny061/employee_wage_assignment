@@ -6,7 +6,9 @@ partTimeHours=4
 totalDays=0
 workingHours=0
 totalWage=0
-read -p "enter 1 for full day and 2 for part time" choise
+workHours()
+{
+read -p"enter 1 for full day and 2 for part time" choise
 while [[ $totalDays -lt 20 && $workingHours -lt 100 ]]
 do
 case $choise in
@@ -20,4 +22,6 @@ esac
 ((totalDays++))
 done
 echo "totalWage=" $totalWage
-
+echo "total hours=" $workingHours
+}
+workHours
