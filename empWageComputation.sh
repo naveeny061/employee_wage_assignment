@@ -15,13 +15,14 @@ case $choise in
 1)dailyEmployeeWage=$((wagePerHour*fullDayHour))
 totalWage=$((totalWage+dailyEmployeeWage))
 workingHours=$((workingHours+8));;
-2)dailyEmployeeWagePartTime=$((wagePerHour*partTimeHours))
-totalWage=$((totalWage+dailyEmployeeWagePartTime))
+2)dailyEmployeeWage=$((wagePerHour*partTimeHours))
+totalWage=$((totalWage+dailyEmployeeWage))
 workingHours=$((workingHours+4));;
 esac
 ((totalDays++))
 done
 echo "totalWage=" $totalWage
 echo "total hours=" $workingHours
+echo "daily wage=" $dailyEmployeeWage
 }
 workHours
